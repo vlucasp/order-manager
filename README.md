@@ -1,8 +1,7 @@
 # Orientações Gerais: order-manager
-
 Este projeto é uma API de controle de pedidos construído em Java 17 com Spring Boot e banco de dados MySQL.
 
--Observações:-
+*Observações:*
   - O projeto foi programado todo em inglês, com exceção dos DTOs e VOs de entrada de pedidos, para que o envio do arquivo JSON/XML possa ser todo em português;
     
   - De acordo com a conexão definida no arquivo "application.properties", o servidor de banco de dados MySQL deve estar hospedado localmente na porta padrão (3306) com usuário root e senha 123456 e deve ser criado o DataBase ORDER_MANAGER. Caso haja alguma alteração nessa estrutura, os dados deste arquivo properties devem ser alterados;
@@ -95,3 +94,9 @@ Este projeto é uma API de controle de pedidos construído em Java 17 com Spring
     </pedidos>
     
     Sendo que para cada pedido o campo "data_cadastro" e "quantidade" não são obrigatórios. O campo "numero_controle" não pode ser o mesmo de algum já cadastrado e "data_cadastro" deve estar no formato DD/MM/AAAA.
+
+*Sugestões de Melhorias:*
+	- Seria interessante criar um cadastro de produto, que envolveria uma validação no cadastro de pedidos onde só deveria ser feito caso exista um produto com o id enviado. Poderia também possuir um controle de quantidades para fins de controle de estoque;
+ 	- Criar um swagger para melhor visualização e testes das chamadas REST;
+  	- Criação de testes unitários, que, apesar de serem trabalhosos por conta da arquitetura utilizada, garantem funcionamento das funcionalidades criadas;
+   	- Alteração dos outros endpoints para receberem body XML.
