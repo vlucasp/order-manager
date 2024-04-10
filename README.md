@@ -1,5 +1,5 @@
 # Orientações Gerais: order-manager
-Este projeto é uma API de controle de pedidos construído em Java 17 com Spring Boot e banco de dados MySQL.
+Este projeto é uma API de controle de pedidos construído em Java 17 com Spring Boot e banco de dados MySQL. O código está localizado na branch "master".
 
 *Observações:*
   - O projeto foi programado todo em inglês, com exceção dos DTOs e VOs de entrada de pedidos, para que o envio do arquivo JSON/XML possa ser todo em português;
