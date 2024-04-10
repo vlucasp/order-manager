@@ -1,0 +1,26 @@
+CREATE TABLE CUSTOMER (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(500)
+);
+
+INSERT INTO CUSTOMER (name) VALUES ('Victor');
+INSERT INTO CUSTOMER (name) VALUES ('Lucas');
+INSERT INTO CUSTOMER (name) VALUES ('Giovanna');
+INSERT INTO CUSTOMER (name) VALUES ('Pedro');
+INSERT INTO CUSTOMER (name) VALUES ('Henrique');
+INSERT INTO CUSTOMER (name) VALUES ('Felipe');
+INSERT INTO CUSTOMER (name) VALUES ('Carlos');
+INSERT INTO CUSTOMER (name) VALUES ('Eduardo');
+INSERT INTO CUSTOMER (name) VALUES ('Gabriel');
+INSERT INTO CUSTOMER (name) VALUES ('Maria');
+
+CREATE TABLE PRODUCT_ORDER (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   order_number VARCHAR(20),
+   registry_date DATE,
+   product_name VARCHAR(50),
+   price DOUBLE,
+   quantity INT,
+   customer_id INT,
+   total_price DOUBLE
+);
