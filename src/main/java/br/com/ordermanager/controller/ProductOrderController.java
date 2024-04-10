@@ -46,6 +46,8 @@ public class ProductOrderController extends AbstractController {
     private void checkRequiredFields(OrderListDTO dto) throws NegocioExceptionHelper {
         if (dto.getPedidos() == null || dto.getPedidos().isEmpty())
             throw new NegocioExceptionHelper("A lista de pedidos não pode ser vazia.");
+        if (dto.getPedidos().size() > 10)
+            throw new NegocioExceptionHelper("A lista de pedidos não pode ser maior que 10.");
         for (OrderDTO order : dto.getPedidos()) {
             if (order.getNumero_controle() == null)
                 throw new NegocioExceptionHelper(buildRequiredFieldMessage("Número de controle"));
